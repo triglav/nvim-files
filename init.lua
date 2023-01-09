@@ -464,6 +464,12 @@ mason_lspconfig.setup_handlers {
       settings = servers[server_name],
     }
   end,
+  ['angularls'] = function()
+    local new_root_dir = require 'lspconfig.util'.root_pattern('angular.json', 'project.json')
+    require 'lspconfig'.angularls.setup {
+      root_dir = new_root_dir
+    }
+  end,
 }
 
 -- Turn on lsp status information
