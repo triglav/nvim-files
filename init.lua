@@ -63,11 +63,13 @@ require('packer').startup(function(use)
   -- Sets vim.ui.select to telescope
   use { 'nvim-telescope/telescope-ui-select.nvim' }
 
-  -- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua
-  local has_plugins, plugins = pcall(require, 'custom.plugins')
-  if has_plugins then
-    plugins(use)
-  end
+  use { "kylechui/nvim-surround", tag = "*" }
+  use 'tpope/vim-unimpaired'
+  use 'tpope/vim-apathy'
+  use 'tpope/vim-vinegar'
+  use 'tpope/vim-eunuch'
+  use 'tpope/vim-projectionist'
+  use 'gpanders/editorconfig.nvim'
 
   if is_bootstrap then
     require('packer').sync()
@@ -509,6 +511,8 @@ cmp.setup {
     { name = 'luasnip' },
   },
 }
+
+require("nvim-surround").setup()
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
