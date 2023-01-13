@@ -111,6 +111,27 @@ vim.o.splitbelow = true
 -- Splitting a window will put the new window right of the current one
 vim.o.splitright = true
 
+-- String to put at the start of lines that have been wrapped.
+vim.o.showbreak = ">> "
+
+-- Minimal number of screen lines to keep above and below the cursor.
+vim.o.scrolloff = 3
+-- The minimal number of columns to scroll horizontally.
+vim.o.sidescroll = 1
+-- The minimal number of screen columns to keep to the left and to the right of
+-- the cursor if 'nowrap' is set.
+vim.o.sidescrolloff = 10
+
+-- Minimal initial height of the help window when it is opened with the ":help"
+-- command.
+vim.o.helpheight = 10
+-- Minimal number of lines for the current window.
+vim.o.winheight = 2
+-- The minimal height of a window, when it's not the current window.
+vim.o.winminheight = 0
+-- The minimal width of a window, when it's not the current window.
+vim.o.winminwidth = 0
+
 -- Enable mouse mode
 vim.o.mouse = 'a'
 
