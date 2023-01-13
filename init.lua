@@ -297,9 +297,11 @@ vim.keymap.set('n', '<leader>*', require('telescope.builtin').grep_string, { des
 vim.keymap.set('n', '<leader>tq', require('telescope.builtin').quickfix, { desc = 'Lists items in the [Q]uickfix list' })
 vim.keymap.set('n', '<leader>tl', require('telescope.builtin').loclist,
   { desc = [[Lists items from the current window's [L]ocation list]] })
-vim.keymap.set('n', '<leader>tp', require('telescope.builtin').oldfiles, { desc = 'Lists [P]reviously open files' })
-vim.keymap.set('n', '<leader>tc', require('telescope.builtin').command_history,
-  { desc = 'Lists [C]ommands that were executed recently' })
+vim.keymap.set('n', '<leader>tpf', require('telescope.builtin').oldfiles, { desc = 'Lists [P]reviously open [F]iles' })
+vim.keymap.set('n', '<leader>tpc', require('telescope.builtin').command_history,
+  { desc = 'Lists [Previously] executed [C]ommands' })
+vim.keymap.set('n', '<leader>tc', require('telescope.builtin').commands,
+  { desc = 'Lists available [C]ommands' })
 vim.keymap.set('n', '<leader>ts', require('telescope.builtin').search_history,
   { desc = 'Lists [S]earches that were executed recently' })
 vim.keymap.set('n', '<leader>th', require('telescope.builtin').help_tags, { desc = 'Lists available [H]elp tags' })
