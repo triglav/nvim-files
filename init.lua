@@ -276,6 +276,9 @@ require('gitsigns').setup()
 -- See `:help telescope` and `:help telescope.setup()`
 require('telescope').setup {
   defaults = {
+    file_ignore_patterns = {
+      ".git"
+    },
     mappings = {
       i = {
         ['<C-u>'] = false,
@@ -310,7 +313,9 @@ vim.keymap.set('n', '<leader>/', function()
   })
 end, { desc = '[/] Fuzzily search in current buffer]' })
 
-vim.keymap.set('n', '<C-p>', require('telescope.builtin').find_files, { desc = 'Find Files' })
+vim.keymap.set('n', '<C-p>', function()
+  require('telescope.builtin').find_files({ hidden = true })
+end, { desc = 'Find Files' })
 vim.keymap.set('n', '<C-g>', require('telescope.builtin').git_status, { desc = 'List [G]it status' })
 vim.keymap.set('n', '<leader>f', require('telescope.builtin').live_grep, { desc = 'Grep [F]iles' })
 vim.keymap.set('n', '<leader>*', require('telescope.builtin').grep_string, { desc = 'Grep current word in Files' })
