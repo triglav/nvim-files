@@ -17,6 +17,8 @@ require('packer').startup(function(use)
       -- Automatically install LSPs to stdpath for neovim
       'williamboman/mason.nvim',
       'williamboman/mason-lspconfig.nvim',
+      -- LSP to inject LSP diagnostics, code actions, and more via Lua.
+      'jose-elias-alvarez/null-ls.nvim',
 
       -- Useful status updates for LSP
       'j-hui/fidget.nvim',
@@ -497,6 +499,16 @@ capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
 -- Setup mason so it can manage external tooling
 require('mason').setup()
+local null_ls = require('null-ls')
+null_ls.setup({
+  sources = {
+    null_ls.builtins.code_actions.eslint.with({ filetypes = { "javascript", "javascriptreact", "svelte", "typescript",
+      "typescriptreact", "vue" } }),
+    null_ls.builtins.formatting.prettier.with({ filetypes = { "javascript", "javascriptreact", "svelte", "typescript",
+      "typescriptreact", "vue", "css", "scss", "less", "html", "json", "jsonc", "yaml", "markdown", "markdown.mdx",
+      "graphql", "handlebars" } })
+  }
+})
 
 -- Ensure the servers above are installed
 local mason_lspconfig = require 'mason-lspconfig'
