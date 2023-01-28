@@ -244,6 +244,18 @@ vim.keymap.set('n', '<Leader>s', ':set spell! spell?<CR>')
 -- Easy toggle wrap
 vim.keymap.set('n', '<Leader>w', ':set wrap! wrap?<CR>')
 
+-- Fugitive commands
+vim.keymap.set('n', '<Leader>gd', ':Gdiff<CR>')
+vim.keymap.set('n', '<Leader>gb', ':G blame<CR>')
+vim.keymap.set('n', '<Leader>gs', ':Gstatus<CR>')
+vim.keymap.set('n', '<Leader>gl', ':Glog<CR>')
+
+-- Diff commands
+vim.keymap.set('n', '<Leader>dt', ':diffthis<CR>')
+vim.keymap.set('n', '<Leader>do', ':diffoff<CR>')
+vim.keymap.set('n', '<Leader>dO', ':diffoff!<CR>')
+vim.keymap.set('n', '<Leader>du', ':diffupdate<CR>')
+
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
