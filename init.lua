@@ -380,7 +380,7 @@ vim.keymap.set('n', '<leader>tl', require('telescope.builtin').loclist,
 vim.keymap.set('n', '<leader>tpf', require('telescope.builtin').oldfiles, { desc = 'Lists [P]reviously open [F]iles' })
 vim.keymap.set('n', '<leader>tpc', require('telescope.builtin').command_history,
   { desc = 'Lists [Previously] executed [C]ommands' })
-vim.keymap.set('n', '<leader>tc', require('telescope.builtin').commands,
+vim.keymap.set('n', '<leader>tC', require('telescope.builtin').commands,
   { desc = 'Lists available [C]ommands' })
 vim.keymap.set('n', '<leader>ts', require('telescope.builtin').search_history,
   { desc = 'Lists [S]earches that were executed recently' })
