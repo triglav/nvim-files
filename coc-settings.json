@@ -1,12 +1,22 @@
 {
-  "rust-analyzer.inlayHints.enable": false,
-  "languageserver": {
-    "godot": {
-      "host": "127.0.0.1",
-      "filetypes": [
-        "gdscript"
-      ],
-      "port": 6005
-    }
-  }
+  "snippets.ultisnips.directories": ["ultisnips"],
+  "clangd.semanticHighlighting": true,
+  "clangd.arguments": [
+    "--compile-commands-dir=build",
+    "--clang-tidy",
+    "--header-insertion=iwyu",
+    "--header-insertion-decorators",
+    "--suggest-missing-includes"
+  ],
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "html"
+  ],
+  "coc.preferences.formatOnSaveFiletypes": ["*"],
+  "html.format.enable": false,
+  "angular.enable-strict-mode-prompt": false,
+  "snippets.ultisnips.pythonPrompt": false
 }
