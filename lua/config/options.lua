@@ -8,6 +8,8 @@ local opt = vim.opt
 
 -- Maximum width of text that is being inserted.
 opt.textwidth = 100
+-- Do not show the line number relative to the line with the cursor in front of each line.
+opt.relativenumber = false
 -- This defines what bases Vim will consider for numbers when using the CTRL-A
 -- and CTRL-X commands for adding to and subtracting from a number
 -- respectively.
