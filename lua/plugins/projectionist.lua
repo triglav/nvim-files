@@ -1,6 +1,7 @@
 return {
   {
     "tpope/vim-projectionist",
+    event = "BufEnter",
     cmd = { "A", "AS", "AV" },
     keys = {
       { "<leader>oo", "<cmd>A<cr>", desc = "Open alternative file" },
