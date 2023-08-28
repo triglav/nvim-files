@@ -42,3 +42,5 @@ opt.gdefault = true
 
 -- Use visual bell instead of beeping.
 opt.visualbell = true
+
+opt.splitkeep = "cursor"
