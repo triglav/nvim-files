@@ -18,7 +18,14 @@ return {
     keys = {
       { "<Leader>gd", "<Cmd>Gdiff<CR>", desc = "Git Diff" },
       { "<Leader>gb", "<Cmd>G blame<CR>", desc = "Git Blame" },
-      { "<Leader>gs", "<Cmd>G<CR>", desc = "Git Status" },
+      {
+        "<Leader>gg",
+        function()
+          vim.cmd("G")
+          vim.cmd("20wincmd_")
+        end,
+        desc = "Git Status",
+      },
       { "<Leader>gl", "<Cmd>Gllog<CR>", desc = "Git Log" },
     },
   },
