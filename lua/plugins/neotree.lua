@@ -29,7 +29,7 @@ return {
               if (node.type == "directory" or node:has_children()) and node:is_expanded() then
                 state.commands.toggle_node(state)
               else
-                require("neo-tree.ui.renderer").focus_node(state, node:get_parent_id())
+                require("neo-tree.ui.renderer").focus_node(state, node:get_parent_id(), true, 0, 15)
               end
             end,
             ["l"] = function(state)
@@ -38,7 +38,7 @@ return {
                 if not node:is_expanded() then
                   state.commands.toggle_node(state)
                 else
-                  require("neo-tree.ui.renderer").focus_node(state, node:get_child_ids()[1])
+                  require("neo-tree.ui.renderer").focus_node(state, node:get_child_ids()[1], true, 0, 15)
                 end
               end
             end,
