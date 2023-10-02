@@ -1,3 +1,5 @@
+local util = require("lspconfig.util")
+
 return {
   {
     "neovim/nvim-lspconfig",
@@ -5,7 +7,9 @@ return {
     opts = {
       ---@type lspconfig.options
       servers = {
-        angularls = {},
+        angularls = {
+          root_dir = util.root_pattern("angular.json", "project.json"),
+        },
       },
     },
   },
