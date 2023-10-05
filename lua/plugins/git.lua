@@ -5,7 +5,8 @@ return {
       "G",
       "Gblame",
       "Gbrowse",
-      "Gdiff",
+      "Gdiffsplit",
+      "Gvdiffsplit",
       "Gedit",
       "Git",
       "Gllog",
@@ -16,7 +17,7 @@ return {
       "Gwrite",
     },
     keys = {
-      { "<Leader>gd", "<Cmd>Gdiff<CR>", desc = "Git Diff" },
+      { "<Leader>gd", "<Cmd>Gvdiffsplit<CR>", desc = "Git Diff" },
       { "<Leader>gb", "<Cmd>G blame<CR>", desc = "Git Blame" },
       {
         "<Leader>gg",
