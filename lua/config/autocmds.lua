@@ -22,3 +22,11 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.opt_local.winfixheight = true
   end,
 })
+
+-- make sure whole word search works also with $ (a dollar)
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+  pattern = { "*.component.html" },
+  callback = function()
+    vim.opt_local.iskeyword:append("$")
+  end,
+})
