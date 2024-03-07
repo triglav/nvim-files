@@ -1,6 +1,7 @@
 return {
   -- Disable bufferline
   { "akinsho/bufferline.nvim", enabled = false },
+  { "lukas-reineke/indent-blankline.nvim", enabled = false },
   -- Show lualine for all buffers, display full path in inactive buffers
   {
     "nvim-lualine/lualine.nvim",
