@@ -27,6 +27,7 @@ vim.api.nvim_create_autocmd("FileType", {
 vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
   pattern = { "*.component.html" },
   callback = function()
+    vim.opt.filetype = "angular"
     vim.opt_local.iskeyword:append("$")
   end,
 })
