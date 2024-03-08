@@ -25,8 +25,8 @@ return {
       { "<leader>fF", false },
       { "<leader>sg", Util.telescope("live_grep", { cwd = false }), desc = "Grep" },
       { "<leader>sG", false },
-      { "<leader>sw", Util.telescope("grep_string", { cwd = false }), desc = "Word" },
-      { "<leader>sW", false },
+      { "<leader>sw", Util.telescope("grep_string", { cwd = false, word_match = "-w" }), desc = "Word Match" },
+      { "<leader>sW", Util.telescope("grep_string", { cwd = false }), desc = "Word" },
     },
   },
 }
