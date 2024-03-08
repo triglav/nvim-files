@@ -10,6 +10,13 @@ return {
         require("telescope").load_extension("fzf")
       end,
     },
+    opts = {
+      defaults = {
+        layout_config = {
+          width = 0.99,
+        },
+      },
+    },
     keys = {
       { "<leader>/", Util.telescope("live_grep", { cwd = false }), desc = "Grep" },
       { "<leader>:", "<cmd>Telescope command_history<cr>", desc = "Command History" },
