@@ -34,6 +34,8 @@ return {
     "lewis6991/gitsigns.nvim",
     event = { "BufReadPre", "BufNewFile" },
     opts = {
+      -- fixes an error: https://github.com/LazyVim/LazyVim/issues/2039#issuecomment-1822808701
+      _extmark_signs = false,
       signs = {
         add = { text = "+" },
         change = { text = "~" },
