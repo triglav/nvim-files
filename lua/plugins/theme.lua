@@ -1,12 +1,12 @@
 return {
   {
-    "ellisonleao/gruvbox.nvim",
-    opts = { contrast = "hard" },
+    "rebelot/kanagawa.nvim",
+    opts = {},
   },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "gruvbox",
+      colorscheme = "kanagawa",
     },
   },
 }
