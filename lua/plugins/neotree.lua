@@ -2,28 +2,12 @@ return {
   {
     "nvim-neo-tree/neo-tree.nvim",
     keys = {
-      {
-        "-",
-        function()
-          require("neo-tree.command").execute({ toggle = true, reveal = true, dir = vim.loop.cwd() })
-        end,
-        desc = "Explorer NeoTree",
-      },
+      { "-", "<leader>fe", desc = "Explorer NeoTree (Root Dir)", remap = true },
     },
     opts = {
       filesystem = {
-        bind_to_cwd = false,
-        follow_current_file = { enabled = true },
-        commands = {
-          system_open = function(state)
-            local node = state.tree:get_node()
-            local path = node:get_id()
-            vim.api.nvim_command(string.format("silent !xdg-open '%s'", path))
-          end,
-        },
         window = {
           mappings = {
-            ["o"] = "system_open",
             ["h"] = function(state)
               local node = state.tree:get_node()
               if node.type == "directory" and node:is_expanded() then
