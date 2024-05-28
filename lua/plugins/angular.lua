@@ -26,6 +26,16 @@ return {
     end,
   },
   {
+    "garymjr/nvim-snippets",
+    opts = {
+      extended_filetypes = {
+        ["html"] = { "angular" },
+        ["jsonc"] = { "angular" },
+        ["typescript"] = { "angular" },
+      },
+    },
+  },
+  {
     "nvim-neotest/neotest",
     dependencies = { "haydenmeade/neotest-jest" },
     opts = function(_, opts)
