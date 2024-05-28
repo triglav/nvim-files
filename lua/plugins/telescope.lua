@@ -20,6 +20,7 @@ return {
       { "<leader>sG", false },
       { "<leader>sw", Util.telescope("grep_string", { cwd = false, word_match = "-w" }), desc = "Word Match" },
       { "<leader>sW", Util.telescope("grep_string", { cwd = false }), desc = "Word" },
+      { "gd", Util.telescope("lsp_definitions", { cwd = false }), desc = "[G]oto [D]efinition" },
     },
   },
 }
