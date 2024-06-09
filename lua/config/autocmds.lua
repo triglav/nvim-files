@@ -24,10 +24,9 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 -- make sure whole word search works also with $ (a dollar)
-vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
-  pattern = { "*.component.html" },
+vim.api.nvim_create_autocmd({ "BufReadPost", "BufNewFile" }, {
+  pattern = { "*.component.html", "*.container.html" },
   callback = function()
-    vim.opt.filetype = "angular"
     vim.opt_local.iskeyword:append("$")
   end,
 })
