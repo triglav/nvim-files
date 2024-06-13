@@ -11,6 +11,7 @@ return {
         ["<C-x>"] = "actions.select_split",
         ["<C-r>"] = "actions.refresh",
       },
+      skip_confirm_for_simple_edits = true,
     },
     dependencies = { "nvim-tree/nvim-web-devicons" },
   },
