@@ -5,6 +5,7 @@ return {
     "neovim/nvim-lspconfig",
     ---@class PluginLspOpts
     opts = {
+      inlay_hints = { enabled = false },
       servers = {
         angularls = {
           root_dir = util.root_pattern("angular.json", "project.json"),
