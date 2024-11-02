@@ -15,6 +15,8 @@ opt.relativenumber = false
 -- respectively.
 opt.nrformats = "alpha,octal,hex"
 
+-- Set List mode by default as off.
+opt.list = false
 -- If on Vim will wrap long lines at a character in 'breakat'.
 opt.linebreak = true
 -- String to put at the start of lines that have been wrapped.
