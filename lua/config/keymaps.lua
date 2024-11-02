@@ -18,10 +18,10 @@ end
 map({ "n", "v", "i" }, "<F1>", "<Esc>", { remap = true })
 
 -- Emulate the original behaviour/bindings of 'triglav/vim-visual-increment'
-map("v", "<C-a>", "g<C-a>")
-map("v", "<C-x>", "g<C-x>")
-map("v", "g<C-a>", "<C-a>")
-map("v", "g<C-x>", "<C-x>")
+vim.keymap.set("v", "<C-a>", "g<C-a>")
+vim.keymap.set("v", "<C-x>", "g<C-x>")
+vim.keymap.set("v", "g<C-a>", "<C-a>")
+vim.keymap.set("v", "g<C-x>", "<C-x>")
 
 -- Set CTRL+C and CTRL+V
 map("v", "<C-c>", '"+y')
