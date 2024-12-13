@@ -46,3 +46,6 @@ opt.gdefault = true
 opt.visualbell = true
 
 opt.splitkeep = "cursor"
+
+--  Disable animations
+vim.g.snacks_animate = false
