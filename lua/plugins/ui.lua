@@ -1,8 +1,12 @@
 return {
   -- Disable bufferline
   { "akinsho/bufferline.nvim", enabled = false },
-  { "lukas-reineke/indent-blankline.nvim", enabled = false },
-  { "echasnovski/mini.indentscope", enabled = false },
+  -- Disable indent guides
+  { "folke/snacks.nvim", opts = {
+    indent = {
+      enabled = false,
+    },
+  } },
   -- Show lualine for all buffers, display full path in inactive buffers
   {
     "nvim-lualine/lualine.nvim",
