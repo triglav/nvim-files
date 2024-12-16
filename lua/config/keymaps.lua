@@ -59,4 +59,4 @@ map("n", "<leader>dt", "<cmd>diffthis<cr>")
 map("n", "<leader>do", "<cmd>diffoff!<cr>")
 map("n", "<leader>du", "<cmd>diffupdate<cr>")
 
-LazyVim.toggle.map("<leader>uu", LazyVim.toggle("list", { desc = "List" }))
+Snacks.toggle.option("list", { name = "List" }):map("<leader>uu")
