@@ -49,3 +49,6 @@ opt.splitkeep = "cursor"
 
 --  Disable animations
 vim.g.snacks_animate = false
+
+-- Use osc52 and resolve Wayland issues
+vim.g.clipboard = "osc52"
