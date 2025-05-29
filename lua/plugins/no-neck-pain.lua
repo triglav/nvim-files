@@ -6,7 +6,7 @@ return {
       { "<leader>uN", "<CMD>NoNeckPain<CR>", desc = "No Neck Pain", remap = true },
     },
     opts = {
-      width = 120,
+      width = 140,
     },
   },
 }
