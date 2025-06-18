@@ -3,7 +3,7 @@ return {
     "ibhagwan/fzf-lua",
     keys = {
       { "<leader>/", LazyVim.pick("live_grep", { root = false }), desc = "Grep" },
-      { "<leader><space>", LazyVim.pick("files", { root = false }), desc = "Find Files" },
+      { "<leader><space>", LazyVim.pick("files", { root = false, line_query = true }), desc = "Find Files" },
       { "<leader>ff", LazyVim.pick("files", { root = false }), desc = "Find Files" },
       { "<leader>fF", false },
       { "<leader>sg", LazyVim.pick("live_grep", { root = false }), desc = "Grep" },
