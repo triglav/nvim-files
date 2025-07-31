@@ -13,5 +13,12 @@ return {
       { "<leader>sw", LazyVim.pick("grep_visual", { root = false }), mode = "v", desc = "Selection" },
       { "<leader>sW", false, mode = "v" },
     },
+    opts = {
+      winopts = {
+        preview = {
+          horizontal = "right:40%",
+        },
+      },
+    },
   },
 }
