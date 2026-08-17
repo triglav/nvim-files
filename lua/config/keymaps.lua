@@ -60,3 +60,15 @@ map("n", "<leader>do", "<cmd>diffoff!<cr>")
 map("n", "<leader>du", "<cmd>diffupdate<cr>")
 
 Snacks.toggle.option("list", { name = "List" }):map("<leader>uu")
+
+-- Toggle diagnostics only within the current buffer
+vim.keymap.set("n", "<leader>ud", function()
+  local is_enabled = vim.diagnostic.is_enabled({ bufnr = 0 })
+  vim.diagnostic.enable(not is_enabled, { bufnr = 0 })
+
+  if is_enabled then
+    vim.notify("Buffer diagnostics disabled", vim.log.levels.INFO, { title = "Diagnostics" })
+  else
+    vim.notify("Buffer diagnostics enabled", vim.log.levels.INFO, { title = "Diagnostics" })
+  end
+end, { desc = "Toggle Buffer Diagnostics" })
