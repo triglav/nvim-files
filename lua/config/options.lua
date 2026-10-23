@@ -51,4 +51,14 @@ opt.splitkeep = "cursor"
 vim.g.snacks_animate = false
 
 -- Use osc52 and resolve Wayland issues
-vim.g.clipboard = "osc52"
+vim.g.clipboard = {
+  name = "OSC 52",
+  copy = {
+    ["+"] = require("vim.ui.clipboard.osc52").copy("+"),
+    ["*"] = require("vim.ui.clipboard.osc52").copy("*"),
+  },
+  paste = {
+    ["+"] = function() end,
+    ["*"] = function() end,
+  },
+}
